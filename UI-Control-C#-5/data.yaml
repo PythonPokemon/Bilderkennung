@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 15
+names: ['Button', 'Checkbox', 'Color', 'Dropdown-Menu', 'Image', 'Input', 'Item', 'Label', 'Messagebox', 'Progressbar', 'Radiobutton', 'Slider', 'Spinner -UpDown-', 'Textblock', 'Tooltip']
+
+roboflow:
+  workspace: bildererkennung-im-bild
+  project: ui-control-c
+  version: 5
+  license: Private
+  url: https://app.roboflow.com/bildererkennung-im-bild/ui-control-c/5
