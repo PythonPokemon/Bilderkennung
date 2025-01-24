@@ -13,6 +13,7 @@ warmup_epochs=1,         # Warm-up-Phase zur Optimierung des Starttrainings
 patience=100,            # Geduld für Lernstop bei Stagnation
 save=True,               # Automatisches Speichern des Modells nach Training
 workers=8,               # Maximale Datenparallelisierung
+verbose=True,
 augment=True,            # Aktivierung der Datenaugmentation
 scale=0.5,               # Verstärkte Skalierung kleiner Objekte
 translate=0.1,           # Bildverschiebung für teilverdeckte Objekte

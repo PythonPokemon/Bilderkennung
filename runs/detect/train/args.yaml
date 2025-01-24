@@ -1,9 +1,10 @@
 task: detect
 mode: train
-model: yolov8n.pt
+model: C:\Users\Student\OneDrive - GFN GmbH (EDU)\Desktop\Jascha\Programmieren\Python
+  Projekte\Bilderkennung\runs\detect\train\weights\best.pt
 data: C:\Users\Student\OneDrive - GFN GmbH (EDU)\Desktop\Jascha\Programmieren\Python
   Projekte\Bilderkennung\UI-Control-C#-6\config\data.yaml
-epochs: 800
+epochs: 350
 time: null
 patience: 100
 batch: 16
