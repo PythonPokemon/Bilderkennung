@@ -1,0 +1,30 @@
+names:
+- '-'
+- Button
+- Checkbox
+- Color
+- Dropdown-Menu
+- Image
+- Input
+- Item
+- Label
+- Messagebox
+- Progressbar
+- Radiobutton
+- Roboflow is an end-to-end computer vision platform that helps you
+- Slider
+- Spinner -UpDown-
+- Textblock
+- This dataset was exported via roboflow.com on March 6- 2024 at 1-36 PM GMT
+- Tooltip
+- cingoz8 - v2 2024-02-27 9-57am
+nc: 19
+roboflow:
+  license: Private
+  project: ui-control-c
+  url: https://universe.roboflow.com/bildererkennung-im-bild/ui-control-c/dataset/6
+  version: 6
+  workspace: bildererkennung-im-bild
+test: ../test/images
+train: ../train/images
+val: ../valid/images

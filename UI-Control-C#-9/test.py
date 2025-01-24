@@ -1,11 +1,11 @@
 from ultralytics import YOLO
 
 # Erstellen eines YOLO-Modells
-model = YOLO("yolov8n.pt")  # Das Standardmodell, das verwendet wird (z.B. yolov8n.pt)
+model = YOLO("C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\runs\\detect\\train\\weights\\best.pt")  # Das Standardmodell, das verwendet wird (z.B. yolov8n.pt)
 
 # Training des Modells
-model.train(data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-9\\config\\data.yaml",
-epochs=80,               # Epochenanzahl für längeres Training
+model.train(data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-6\\config\\data.yaml",
+epochs=350,               # Epochenanzahl für längeres Training
 batch=16,                # Mittelgroße Batch-Größe für Stabilität und Speicherverwaltung
 lr0=0.005,               # Angepasste Start-Lernrate für stabilere Konvergenz
 optimizer="AdamW",       # AdamW-Optimierer für robustes Lernen
