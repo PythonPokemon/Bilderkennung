@@ -10,7 +10,7 @@ model = YOLO("C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Pr
 # Version-8 2.000 Bilder
 # C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-8\\data.yaml
 model.train(
-    data="C:\\Users\\Student\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-6\\config\\data.yaml",
+    data="C:\\Users\\Student\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-8\\config\\data.yaml",
     epochs=150,                  # Mehr Epochen für bessere Konvergenz
     batch=16,                   # Mittelgroße Batch-Größe für bessere GPU-Auslastung
     lr0=0.005,                  # Niedrigere Start-Lernrate für stabileres Training
