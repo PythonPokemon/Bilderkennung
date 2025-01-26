@@ -1,16 +1,23 @@
+# Version-6 | 281 Bilder | Dauer pro Epoche 01:15 == mAP 0.99 | OVerfitting
+# C:\\Users\\Student\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-6\\config\\data.yaml
+
+# Version-8 | 758 Bilder | Dauer pro Epoche 04:30 == mAP 0.60
+# C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-8\\config\\data.yaml
+
+# Version-9 | 2375 Bilder | Dauer pro Epoche ??? == mAP ???
+# C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-9\\config\\data.yaml
+
+# Version-10 | 3074 Bilder | Dauer pro Epoche ??? == mAP ???
+# C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-10\\config\\data.yaml
+
 from ultralytics import YOLO
 
 # Modell trainniert auf overfitting Version 6 |
 model = YOLO("C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\runs\\detect\\train\\weights\\best.pt")
 
 # Starte das Training mit optimierten Parametern
-# Version-6 | 250 Bilder | Dauer pro Epoche 01:15 == mAP 0.99 | OVerfitting
-# C:\\Users\\Student\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-6\\config\\data.yaml
-
-# Version-8 | 2.000 Bilder | Dauer pro Epoche 04:30 == mAP 0.60
-# C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-8\\data.yaml
 model.train(
-    data="C:\\Users\\Student\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-8\\config\\data.yaml",
+    data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-8\\config\\data.yaml",
     epochs=150,                  # Mehr Epochen für bessere Konvergenz
     batch=16,                   # Mittelgroße Batch-Größe für bessere GPU-Auslastung
     lr0=0.005,                  # Niedrigere Start-Lernrate für stabileres Training
