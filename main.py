@@ -17,8 +17,8 @@ model = YOLO("C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Pr
 
 # Starte das Training mit optimierten Parametern
 model.train(
-    data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-8\\config\\data.yaml",
-    epochs=150,                  # Mehr Epochen für bessere Konvergenz
+    data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-9\\config\\data.yaml",
+    epochs=40,                  # Mehr Epochen für bessere Konvergenz
     batch=16,                   # Mittelgroße Batch-Größe für bessere GPU-Auslastung
     lr0=0.005,                  # Niedrigere Start-Lernrate für stabileres Training
     optimizer="AdamW",          # Verbesserter Optimierer für robustes Training

@@ -3,8 +3,8 @@ mode: train
 model: C:\Users\Student\OneDrive - GFN GmbH (EDU)\Desktop\Jascha\Programmieren\Python
   Projekte\Bilderkennung\runs\detect\train\weights\best.pt
 data: C:\Users\Student\OneDrive - GFN GmbH (EDU)\Desktop\Jascha\Programmieren\Python
-  Projekte\Bilderkennung\UI-Control-C#-8\config\data.yaml
-epochs: 150
+  Projekte\Bilderkennung\UI-Control-C#-9\config\data.yaml
+epochs: 40
 time: null
 patience: 100
 batch: 16
