@@ -4,7 +4,7 @@
 # Version-8 | 758 Bilder | Dauer pro Epoche 04:30 == mAP 0.60
 # C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-8\\config\\data.yaml
 
-# Version-9 | 2375 Bilder | Dauer pro Epoche ??? == mAP ???
+# Version-9 | 2375 Bilder | Dauer pro Epoche 15.05 == mAP 0.65
 # C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-9\\config\\data.yaml
 
 # Version-10 | 3074 Bilder | Dauer pro Epoche ??? == mAP ???
