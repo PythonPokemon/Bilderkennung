@@ -7,7 +7,7 @@
 # Version-9 | 2375 Bilder | Dauer pro Epoche 15.05 == mAP 0.7 | 27 epochen
 # C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-9\\config\\data.yaml
 
-# Version-10 | 3074 Bilder | Dauer pro Epoche 25min == mAP ???
+# Version-10 | 3074 Bilder | Dauer pro Epoche 25min == mAP 0.44 | 18 epochen , abbruch weil keine beserung!
 # C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-10\\config\\data.yaml
 
 from ultralytics import YOLO
@@ -17,18 +17,18 @@ model = YOLO("C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Pr
 
 # Starte das Training mit optimierten Parametern
 model.train(
-    data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-10\\config\\data.yaml",
-    epochs=43,                  # Mehr Epochen für bessere Konvergenz
+    data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-6\\config\\data.yaml",
+    epochs=500,                  # Mehr Epochen für bessere Konvergenz
     batch=32,                   # Mittelgroße Batch-Größe für bessere GPU-Auslastung oder 64 | 0.7 == 70%
     #device=0,                  # ob man grafikkarte benutzen soll oder nicht
-    lr0=0.01,                  # Niedrigere Start-Lernrate für stabileres Training |   0.01
+    lr0=0.001,                  # Niedrigere Start-Lernrate für stabileres Training |   0.01
     optimizer="auto",          # Verbesserter Optimierer für robustes Training
-    warmup_epochs=2,            # Warm-up für stabileren Start
-    patience=10,                # Geduld für Early Stopping (10 Epochen ohne Verbesserung)
+    warmup_epochs=10,            # Warm-up für stabileren Start
+    patience=20,                # Geduld für Early Stopping (10 Epochen ohne Verbesserung)
     save=True,                  # Speichere das Modell nach dem Training
     workers=8,                  # Maximale Parallelisierung bei der Datenvorbereitung
     verbose=True,            # Detaillierte Trainingsinformationen anzeigen
-    #augment=True,               # Datenaugmentation aktivieren
+    augment=True,               # Datenaugmentation aktivieren
     scale=0.5,                  # Skaliere kleine Objekte stärker
     #translate=0.1,              # Bildverschiebung zur Unterstützung teilweiser Sichtbarkeit
     #fliplr=0.5,                 # Horizontale Spiegelung für mehr Variabilität
