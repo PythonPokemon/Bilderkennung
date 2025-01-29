@@ -17,23 +17,30 @@ model = YOLO("C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Pr
 
 # Starte das Training mit optimierten Parametern
 model.train(
-    data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-6\\config\\data.yaml",
-    epochs=500,                  # Mehr Epochen für bessere Konvergenz
-    batch=32,                   # Mittelgroße Batch-Größe für bessere GPU-Auslastung oder 64 | 0.7 == 70%
-    #device=0,                  # ob man grafikkarte benutzen soll oder nicht
-    lr0=0.001,                  # Niedrigere Start-Lernrate für stabileres Training |   0.01
-    optimizer="auto",          # Verbesserter Optimierer für robustes Training
-    warmup_epochs=10,            # Warm-up für stabileren Start
-    patience=20,                # Geduld für Early Stopping (10 Epochen ohne Verbesserung)
-    save=True,                  # Speichere das Modell nach dem Training
-    workers=8,                  # Maximale Parallelisierung bei der Datenvorbereitung
-    verbose=True,            # Detaillierte Trainingsinformationen anzeigen
-    augment=True,               # Datenaugmentation aktivieren
-    scale=0.5,                  # Skaliere kleine Objekte stärker
-    #translate=0.1,              # Bildverschiebung zur Unterstützung teilweiser Sichtbarkeit
-    #fliplr=0.5,                 # Horizontale Spiegelung für mehr Variabilität
-    #auto_augment="randaugment", # Automatische Datenaugmentierung für verbesserte Generalisierung
-    #erasing=0.4,                # Löschen von Bildteilen zur Förderung von Robustheit
-    crop_fraction=1.0,          # Volles Zuschneiden für fokussierte Objekterkennung
-    exist_ok=True               # Überschreibe vorhandene Dateien ohne Fehler
+    data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-10\\config\\data.yaml",
+    epochs=40,                  # Mehr Epochen für bessere Konvergenz
+    batch=16,                    # Batch-Größe anpassen (abhängig von deiner GPU)
+    imgsz=640,                   # Bildgröße beibehalten
+    lr0=0.01,                    # Start-Lernrate
+    lrf=0.1,                     # Finale Lernrate (10% von lr0)
+    momentum=0.937,              # Momentum für den Optimierer
+    weight_decay=0.0005,         # Gewichtsverlust zur Regularisierung
+    warmup_epochs=4,             # Warm-up-Epochen für stabileren Start
+    patience=20,                 # Early Stopping nach 20 Epochen ohne Verbesserung
+    augment=True,                # Datenaugmentierung aktivieren
+    hsv_h=0.015,                 # Farbton-Variation (HSV-Augmentierung)
+    hsv_s=0.7,                   # Sättigungs-Variation
+    hsv_v=0.4,                   # Helligkeits-Variation
+    translate=0.1,               # Bildverschiebung
+    scale=0.5,                   # Skalierung
+    fliplr=0.5,                  # Horizontale Spiegelung
+    mosaic=1.0,                  # Mosaic-Augmentierung (100% Wahrscheinlichkeit)
+    mixup=0.1,                   # Mixup-Augmentierung (10% Wahrscheinlichkeit)
+    copy_paste=0.1,              # Copy-Paste-Augmentierung (10% Wahrscheinlichkeit)
+    erasing=0.4,                 # Random Erasing (40% Wahrscheinlichkeit)
+    workers=8,                   # Anzahl der Worker für Datenladen
+    #device=0,                    # GPU verwenden (falls verfügbar)
+    save=True,                   # Modell speichern
+    exist_ok=True,               # Vorhandene Dateien überschreiben
+    verbose=True                 # Detaillierte Ausgaben während des Trainings
 )
