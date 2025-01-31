@@ -1,4 +1,4 @@
-# Version-6 | 281 Bilder | Dauer pro Epoche 01:15 == mAP 0.99 | OVerfitting
+# Version-6 | 281 Bilder | Dauer pro Epoche 01:15 == mAP 0.99 | OVerfitting?
 # C:\\Users\\Student\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-6\\config\\data.yaml
 
 # Version-8 | 758 Bilder | Dauer pro Epoche 04:30 == mAP 0.60 | 100 epochen
@@ -17,15 +17,15 @@ model = YOLO("C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Pr
 
 # Starte das Training mit optimierten Parametern
 model.train(
-    data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-10\\config\\data.yaml",
-    epochs=40,                  # Mehr Epochen für bessere Konvergenz
+    data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-1\\config\\data.yaml",
+    epochs=150,                  # Mehr Epochen für bessere Konvergenz
     batch=16,                    # Batch-Größe anpassen (abhängig von deiner GPU)
     imgsz=640,                   # Bildgröße beibehalten
     lr0=0.01,                    # Start-Lernrate
     lrf=0.1,                     # Finale Lernrate (10% von lr0)
     momentum=0.937,              # Momentum für den Optimierer
     weight_decay=0.0005,         # Gewichtsverlust zur Regularisierung
-    warmup_epochs=4,             # Warm-up-Epochen für stabileren Start
+    warmup_epochs=15,             # Warm-up-Epochen für stabileren Start
     patience=20,                 # Early Stopping nach 20 Epochen ohne Verbesserung
     augment=True,                # Datenaugmentierung aktivieren
     hsv_h=0.015,                 # Farbton-Variation (HSV-Augmentierung)
