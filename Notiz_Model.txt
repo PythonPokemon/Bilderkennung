@@ -1,0 +1,4 @@
+wenn man das best.pt mit einem datenset trainirt und dann ein anderes datenset mit komplett neuen bildern, trainiert führt das zu schlechteren ergebnisen und das model vergisst die anfänglichen bilder!
+auf die es trainiert wurde odr sogar klassifizierung die evtl. herausgenommen wurden.
+
+neuer versuch wird es sein. das beste model. mit neuen bildern einzufüttern, aber im gleichen datenset!
