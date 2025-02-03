@@ -17,7 +17,7 @@ model = YOLO("C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Pr
 
 # Starte das Training mit optimierten Parametern
 model.train(
-    data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-1\\config\\data.yaml",
+    data="C:\\Users\\Student\\OneDrive - GFN GmbH (EDU)\\Desktop\\Jascha\\Programmieren\\Python Projekte\\Bilderkennung\\UI-Control-C#-6\\config\\data.yaml",
     epochs=40,                  # Mehr Epochen für bessere Konvergenz
     batch=16,                    # Batch-Größe anpassen (abhängig von deiner GPU)
     imgsz=640,                   # Bildgröße beibehalten
